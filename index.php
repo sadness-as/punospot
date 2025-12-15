@@ -12,7 +12,7 @@
 	<nav class="flex aic jcsb">
 		<a href="#">PunoSpot</a>
 		<ul class="menu flex">
-			<li><a href="http://localhost/punospot/">Inicio</a></li>
+			<li><a href="https://sadness-as.github.io/punospot/">Inicio</a></li>
 			<li><a href="atractivos.html">Atractivos</a></li>
 			<li><a href="#">Hoteles</a></li>
 			<li><a href="#">Restaurantes</a></li>
