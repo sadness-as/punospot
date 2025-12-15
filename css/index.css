@@ -1,0 +1,138 @@
+@import 'fonts.css';
+*{
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	font-family: "Questrial", sans-serif;
+}
+body{
+	background: rgb(200,200,200);
+}
+header{
+	position: relative;
+	padding-top: 80px;
+	width: 100%;
+	height: 600px;
+	transition: all .5s;
+	overflow: hidden;
+}
+header .images{
+	position: absolute;
+	top: 0;
+	left: 0;
+	background-size: cover;
+	background: url("../files/bg5.jpg") center/cover no-repeat;
+	width: 100%;
+	height: 100%;
+	transition: all .5s;
+}
+header .images:before{
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: rgb(0,34,79);
+	opacity: 0.4;
+}
+header .img0{
+	background: url("../files/bg1.jpg") center/cover no-repeat;
+}
+header .img1{
+	background: url("../files/bg4.jpg") center/cover no-repeat;
+}
+header .img2{
+	background: url("../files/bg5.jpg") center/cover no-repeat;
+
+}
+header div{
+	color: #fff;
+	font-size: 35px;
+	text-align: center;
+	z-index: 1;
+}
+header:before,header:after{
+	content: '';
+	position: absolute;
+
+	bottom: -100px;
+	width: 110%;
+	height: 120px;
+	background: rgb(200,200,200);
+	z-index: 10;
+}
+header:before{
+	transform: rotate(-3deg);
+}
+header:after{
+	transform: rotate(3deg);
+}
+main{
+	position: relative;
+	background: rgb(200,200,200);
+	padding: 20px 0;
+}
+main div{
+	padding: 0 10px;
+	color: rgb(0,34,79);
+	width: 800px;
+	font-size: 18px;
+	text-align: justify;
+}
+main div h1{
+	padding-top: 15px;
+}
+main div p{
+	padding: 10px 0;
+}
+.map{
+	width: 100%;
+	padding: 30px 0;
+}
+div#map{
+	width: 800px;
+	height: 500px;
+}
+
+/*footer{
+	padding: 15px 0;
+	background: rgb(0,34,79);
+}
+footer div{
+	color: #fff;
+	height: 30px;
+}*/
+
+
+@media screen and (max-width: 900px){
+	header{
+		height: 500px;
+	}
+	header div{
+		font-size: 25px;
+	}
+	main div{
+		font-size: 10px;
+	}
+	main div p{
+		font-size: 15px;
+	}
+	.map{
+		padding: 20px;
+	}
+}
+
+
+
+
+
+.flex{display: flex;}
+.aic{align-items: center;}
+.fdc{flex-direction: column;}
+.jcc{justify-content: center;}
+.jcsa{justify-content: space-around;}
+.jcsb{justify-content: space-between;}
+.off{opacity: 0;transform: scale(1.3);}

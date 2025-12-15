@@ -1,0 +1,94 @@
+body{
+	background: rgb(200,200,200);
+}
+.header2{
+	position: relative;
+	width: 100%;
+	padding-top: 80px;
+}
+.header2 .title{
+	position: relative;
+	width: 100%;
+	height: 350px;
+	overflow: hidden;
+}
+.title .img-title{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: url(../files/bg1.jpg) center/cover no-repeat;
+}
+.title .img-title:before{
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: rgb(0,34,79);
+	opacity: 0.3;
+}
+.header2 .title h1{
+	color: #fff;
+	font-size: 50px;
+	z-index: 1;
+	text-align: center;
+}
+.middle{
+	position: relative;
+	width: 80%;
+	font-size: 18px;
+}
+.title:before,.title:after{
+	content: '';
+	position: absolute;
+	bottom: -100px;
+	width: 110%;
+	height: 120px;
+	background: rgb(200,200,200);
+	z-index: 10;
+}
+.title:before{
+	transform: rotate(-3deg);
+}
+.title:after{
+	transform: rotate(3deg);
+}
+.middle > h1{
+	color: rgb(0,34,79);
+	padding-top: 15px;
+}
+.middle p{
+	padding: 10px 0;
+	text-align: justify;
+	color: rgb(0,34,79);
+}
+#map{
+	width: 100%;
+	height: 500px;
+	margin-top: 20px;
+}
+
+@media screen and (max-width: 700px){
+	.middle{
+		width: 90% !important;
+	}
+	.middle .title h1{
+		font-size: 30px;
+	}
+	.middle > h1{
+		font-size: 30px;
+	}
+	#map{
+		height: 300px;
+	}
+}
+
+.flex{display: flex;}
+.aic{align-items: center;}
+.fdc{flex-direction: column;}
+.jcc{justify-content: center;}
+.jcsa{justify-content: space-around;}
+.jcsb{justify-content: space-between;}
