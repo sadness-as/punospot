@@ -4,6 +4,7 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Atractivos</title>
+	<link rel="stylesheet" href="css/leaflet.css">
 	<link rel="stylesheet" href="css/base.css">
 </head>
 <body>
@@ -14,10 +15,11 @@
 			<li><a href="atractivos.html">Atractivos</a></li>
 			<li><a href="hoteles.html">Hoteles</a></li>
 			<li><a href="gastronomia.html">Gastronomia</a></li>
-			<li><a href="#">Nosotros</a></li>
 			<li><a href="#" class="login">Login</a></li>
 		</ul>
-		<div class="btnMenu"></div>
+		<div class="btnMenu">
+			<img src="files/bars.png" alt="">
+		</div>
 	</nav>
 	<div class="header flex aic jcc">
 		<div class="bg"></div>
@@ -26,11 +28,11 @@
 			<p>¿Qué hacer en Puno?</p>
 		</div>
 	</div>
-	<div class="main flex aic jcc fdc">
+	<div class="main atractivos flex aic jcc fdc">
 		<div class="cards flex aic jcc">
 			<div class="card">
 				<img src="files/lugar-sillustani.png" alt="">
-				<div class="card-content">
+				<div class="card-content flex jcsa fdc">
 					<h3 class="card-title">Ruinas de Sillustani</h3>
 					<p class="card-description">Un impresionante conjunto funerario preincaico situado sobre una colina con vistas al lago Umayo.</p>
 					<span class="card-link">Ver en el mapa</span>
@@ -38,7 +40,7 @@
 			</div>
 			<div class="card">
 				<img src="files/lugar-titicaca.jpg" alt="">
-				<div class="card-content">
+				<div class="card-content flex jcsa fdc">
 					<h3 class="card-title">Lago Titicaca</h3>
 					<p class="card-description">El lago navegable más alto del mundo, hogar de leyendas ancestrales y paisajes impresionantes.</p>
 					<span class="card-link">Ver en el mapa</span>
@@ -46,14 +48,14 @@
 			</div>
 			<div class="card">
 				<img src="files/lugar-uros.png" alt="">
-				<div class="card-content">
+				<div class="card-content flex jcsa fdc">
 					<h3 class="card-title">Islas Flotantes de los Uros</h3>
 					<p class="card-description">Comunidades indígenas que habitan islas artificiales hechas de totora en el lago Titicaca.</p>
 					<span class="card-link">Ver en el mapa</span>
 				</div>
 			</div><div class="card">
 				<img src="files/lugar-chullpas-cutimbo.png" alt="">
-				<div class="card-content">
+				<div class="card-content flex jcsa fdc">
 					<h3 class="card-title">Chullpas de Cutimbo</h3>
 					<p class="card-description">Tumbas preincaicas con torres funerarias que ofrecen vistas panorámicas de la región.</p>
 					<span class="card-link">Ver en el mapa</span>
@@ -67,6 +69,15 @@
 			<span>COPYRIGHT (C) 2025</span>
 		</div>
 	</footer>
+	<div class="map-content none flex aic jcc">
+		<div class="map-middle">
+			<h1 class="map-title">Uros</h1>
+			<div id="map"></div>
+			<div class="btn-close"></div>
+		</div>
+	</div>
+	<script src="js/leaflet-src.js"></script>
+	<script src="js/rutas.js"></script>
 	<script src="js/base.js"></script>
 </body>
 </html>

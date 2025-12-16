@@ -25,6 +25,11 @@ nav .btnMenu{
 	display: none;
 	cursor: pointer;
 }
+nav .btnMenu img{
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
 nav .menu{
 	list-style: none;
 }
@@ -145,71 +150,12 @@ nav ul li .login:hover{
 	width: 100%;
 	padding: 20px 0; 
 }
-/*.main .container{
-	width: 880px;
-	padding: 10px;
-}
-.main .container a{
-	position: relative;
-	text-decoration: none;
-	color: #000;
-	display: block;
-}
-.main .container .a-link{
-}
-.main .container .a-link:hover{
-}
-.main .container .a-link:hover .a-content{
-	background: rgb(200,200,200);
-	box-shadow: 0 0 5px 5px rgb(0,34,79),inset 0 0 5px 5px rgb(0,34,79);
-	border: 2px solid #fff;
-}
-.main .container .a-content{
-	transition: all .5s;
-	height: 150px;
-	border: 2px solid rgb(0,34,79);
-	border-radius: 5px;
-	padding: 0 10px;
-	transition: all .5s;
-}
-.main .container .text{
-	width: 400px;
-	padding: 0 10px;
-}
-.main .container h1{
-	padding-top: 10px;
-}
-.main .container p{
-	padding-top: 10px;
-	position: relative;
-}
-.main .container p:before{
-	content: '';
-	position: absolute;
-	top: 4px;
-	left: 0;
-	width: 100%;
-	height: 1px;
-	background: #888;
-}
-.main .container .marker{
-	width: 100px;
-}
-.main .container .img{
-	position: relative;
-	width: 200px;
-}
-.main .container div img{
-	width: 200px;
-	object-fit: cover;
-}*/
 .cards{
 	width: 100%;
 	flex-wrap: wrap;
 }
 .card{
 	width: 400px;
-	height: 380px;
 	border-radius: 20px;
 	overflow: hidden;
 	background: #fff;
@@ -228,10 +174,12 @@ nav ul li .login:hover{
 .card .card-content{
 	padding: 15px;
 	font-size: 20px;
+	height: 180px;
 	color: rgb(0,34,79);
 }
 .card .card-content .card-description{
 	padding: 10px 0;
+	overflow: auto;
 }
 .card .card-content .card-link{
 	display: block;
@@ -240,7 +188,12 @@ nav ul li .login:hover{
 	color: rgb(0,34,79);
 	cursor: pointer;
 }
-
+.hoteles .card .card-content{
+	height: 150px;
+}
+.gastronomia .card .card-content{
+	height: 120px;
+}
 
 footer{
 	margin-top: 20px;
@@ -251,6 +204,53 @@ footer div{
 	color: #fff;
 	height: 30px;
 }
+.map-content{
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100vh;
+	background: rgba(0,0,0,0.5);
+	padding: 30px;
+	z-index: 1002;
+}
+.map-content .map-middle{
+	position: relative;
+	width: 90%;
+	height: 90%;
+	background: rgb(220,220,220);
+	border-radius: 20px;
+	overflow: hidden;
+	text-align: center;
+}
+.map-content .map-middle .map-title{
+	color: rgb(0,34,79);
+	line-height: 50px;
+}
+.map-content .map-middle #map{
+	width: 100%;
+	height: calc(100% - 50px);
+}
+.map-content .btn-close{
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 50px;
+	height: 50px;
+	background: rgb(0,34,79);
+	border-radius: 0 20px 0 20px;
+	cursor: pointer;
+}
+.map-content .btn-close:before{
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 50px;
+	height: 50px;
+	background: url(../files/cerrar.png) center/cover no-repeat;
+}
+
 
 @media screen and (max-width: 900px){
 	nav{
@@ -314,6 +314,9 @@ footer div{
 	.main .container .img img{
 		height: 150px;
 	}
+	.card .card-content{
+		height: auto !important;
+	}
 }
 @media screen and (max-width: 300px){
 	.main .container div .img{
@@ -337,6 +340,8 @@ footer div{
 .jcsa{justify-content: space-around;}
 .jcsb{justify-content: space-between;}
 .on{left: 0 !important;}
+.none{opacity: 0;z-index: -1000;}
+
 
 .leaflet-bottom {
 	z-index: -1 !important;

@@ -3,8 +3,9 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Gastronomía</title>
+	<title>Hoteles</title>
 	<link rel="stylesheet" href="css/base.css">
+	<link rel="stylesheet" href="css/leaflet.css">
 </head>
 <body>
 	<nav class="flex aic jcsb">
@@ -14,10 +15,11 @@
 			<li><a href="atractivos.html">Atractivos</a></li>
 			<li><a href="hoteles.html">Hoteles</a></li>
 			<li><a href="gastronomia.html">Gastronomia</a></li>
-			<li><a href="#">Nosotros</a></li>
 			<li><a href="#" class="login">Login</a></li>
 		</ul>
-		<div class="btnMenu"></div>
+		<div class="btnMenu">
+			<img src="files/bars.png" alt="">
+		</div>
 	</nav>
 	<div class="header flex aic jcc">
 		<div class="bg bg-hotels"></div>
@@ -26,13 +28,29 @@
 			<p>Descubre.</p>
 		</div>
 	</div>
-	<div class="main flex aic jcc fdc">
+	<div class="main hoteles flex aic jcc fdc">
 		<div class="cards flex jcc aic">
 			<div class="card">
-				<img src="files/rest.png" alt="restaurant">
-				<div class="card-content">
-					<h3 class="card-title">Lago Titicaca</h3>
-					<p class="card-description">El lago navegable más alto del mundo, hogar de leyendas ancestrales y paisajes impresionantes.</p>
+				<img src="files/kaaro.jpg" alt="">
+				<div class="card-content flex aic jcsb fdc">
+					<h3 class="card-title">Kaaro Hotel Puno</h3>
+					<p class="card-description">Jiron Ilave, Puno, Perú</p>
+					<span class="card-link">Ver en el mapa</span>
+				</div>
+			</div>
+			<div class="card">
+				<img src="files/lake.jpg" alt="">
+				<div class="card-content flex aic jcsb fdc">
+					<h3 class="card-title">Lake Titicaca Hotel</h3>
+					<p class="card-description">Av. Uros Chulluni 195, Puno, Perú</p>
+					<span class="card-link">Ver en el mapa</span>
+				</div>
+			</div>
+			<div class="card">
+				<img src="files/hacienda.jpg" alt="">
+				<div class="card-content flex aic jcsb fdc">
+					<h3 class="card-title">Hotel Hacienda Puno</h3>
+					<p class="card-description">Jr. Deustua, 297, 051 Puno, Perú</p>
 					<span class="card-link">Ver en el mapa</span>
 				</div>
 			</div>
@@ -44,6 +62,15 @@
 			<span>COPYRIGHT (C) 2025</span>
 		</div>
 	</footer>
+	<div class="map-content none flex aic jcc">
+		<div class="map-middle">
+			<h1 class="map-title">Uros</h1>
+			<div id="map"></div>
+			<div class="btn-close"></div>
+		</div>
+	</div>
+	<script src="js/leafted.js"></script>
+	<script src="js/rutas.js"></script>
 	<script src="js/base.js"></script>
 </body>
 </html>

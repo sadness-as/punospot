@@ -4,6 +4,7 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Gastronomía</title>
+	<link rel="stylesheet" href="css/leaflet.css">
 	<link rel="stylesheet" href="css/base.css">
 </head>
 <body>
@@ -14,10 +15,11 @@
 			<li><a href="atractivos.html">Atractivos</a></li>
 			<li><a href="hoteles.html">Hoteles</a></li>
 			<li><a href="gastronomia.html">Gastronomia</a></li>
-			<li><a href="#">Nosotros</a></li>
 			<li><a href="#" class="login">Login</a></li>
 		</ul>
-		<div class="btnMenu"></div>
+		<div class="btnMenu">
+			<img src="files/bars.png" alt="">
+		</div>
 	</nav>
 	<div class="header flex aic jcc">
 		<div class="bg bg-rest"></div>
@@ -26,7 +28,7 @@
 			<p>Descubre los platillos tradicionales que definen la identidad gastronómica de la región.</p>
 		</div>
 	</div>
-	<div class="main flex aic jcc fdc">
+	<div class="main gastronomia flex aic jcc fdc">
 		<div class="cards flex jcc aic">
 			<div class="card">
 				<img src="files/Pesque.png" alt="">
@@ -64,6 +66,8 @@
 			<span>COPYRIGHT (C) 2025</span>
 		</div>
 	</footer>
+	<div id="map" style="display: none;"></div>
+	<script src="js/leaflet-src.js"></script>
 	<script src="js/base.js"></script>
 </body>
 </html>
