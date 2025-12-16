@@ -83,7 +83,7 @@ main div{
 	text-align: justify;
 }
 main div h1{
-	padding-top: 15px;
+	padding: 15px 0;
 }
 main div p{
 	padding: 10px 0;
